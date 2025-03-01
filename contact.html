@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ckb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xalel Nawzad / داواکاری دیزاین</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+            background-size: 200% 200%;
+            animation: gradientAnimation 10s ease infinite;
+            color: #fff;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        h1 {
+            text-align: center;
+            color: rgb(0, 0, 0); /* گۆڕینی ڕەنگی دەق بۆ سپی */
+            margin-bottom: 20px;
+            font-size: 2rem;
+            text-shadow: 2px 2px 4px rgba(155, 155, 155, 0.5);
+        }
+
+        form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            width: 350px;
+            animation: fadeIn 0.5s ease-in-out;
+            direction: rtl; /* ئاڕاستەکردنی فۆڕم بۆ ڕاست بۆ چەپ */
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            font-weight: bold;
+            text-align: right; /* ئاڕاستەکردنی دەق بۆ ڕاست */
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea,
+        select,
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: #f9f9f9;
+            color: #333;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            text-align: right; /* ئاڕاستەکردنی دەق بۆ ڕاست */
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        textarea:focus,
+        select:focus {
+            border-color: #ffcc00;
+            box-shadow: 0 0 8px rgba(255, 204, 0, 0.5);
+            outline: none;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #ffcc00;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            color: #333;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #e6b800;
+            transform: scale(1.05);
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background-color: #ffcc00;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #e6b800;
+            transform: scale(1.05);
+            color: #fff; /* گۆڕینی ڕەنگی دەق بۆ سپی */
+        }
+
+        @media (max-width: 600px) {
+            form {
+                width: 90%; /* گۆڕینی پانی فۆڕم بۆ مۆبایل */
+            }
+            h1 {
+                font-size: 1.5rem; /* گۆڕینی قەبارەی دەق بۆ مۆبایل */
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html">سەرەکی</a>
+
+    <form action="submit_form.php" method="POST">
+        <h1>کارەکەت جوانتر بکە و داواکاریەکەت بنوسە</h1>
+        <label for="name">ناو</label>
+        <input type="text" id="name" placeholder="ناو" required><br>
+        <label for="email">ئیمەیڵ</label>
+        <input type="email" id="email" placeholder="email@gmail.com" required><br>
+        <label for="number">ژمارە مۆبایل</label>
+        <input type="tel" id="number" placeholder="0750 1234567" pattern="[0-9]{11}" required><br>
+        <label for="design-type">جۆری دیزاین</label>
+        <select id="design-type" required>
+            <option value="سۆشیاڵ میدا">سۆشیاڵ میدیا</option>
+            <option value="وەرزشی">وەرزشی</option>
+            <option value="لۆگۆ">لۆگۆ</option>
+            <option value="پۆستەر">پۆستەر</option>
+            <option value="ئایینی">ئایینی</option>
+        </select><br>
+        <label for="request">داواکاری</label>
+        <textarea id="request" placeholder="داواکاری" required></textarea><br>
+        <label for="file">وێنە (ئەگەر هەیە)</label>
+        <input type="file" id="file" accept="image/*"><br>
+        <input type="submit" value="ناردن">
+    </form>
+</body>
+</html>
