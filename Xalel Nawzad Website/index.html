@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ckb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Xalel Nawzad - Graphic Designer Portfolio">
+    <meta name="keywords" content="Xalel Nawzad, Graphic Designer, Portfolio, دیزاینەری گرافیک">
+    <meta name="author" content="Xalel Nawzad">
+    <title>Xalel Nawzad - گرافیک دیزاینەر</title>
+    <style>
+        /* گشتی */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* ناونیشانەکان */
+        h1 {
+            color: #ffcc00;
+            margin-top: 50px;
+            font-size: 2.5rem;
+            opacity: 0; /* دەستپێکردن بە نەبینراوی */
+            animation: fadeIn 1s ease-in-out forwards; /* forwards دەکاتەوە کە لە کۆتاییدا بینراو بمێنێتەوە */
+        }
+
+        h2 {
+            color: #ccc;
+            margin-top: 10px;
+            font-size: 1.5rem;
+            opacity: 0; /* دەستپێکردن بە نەبینراوی */
+            animation: fadeIn 1s ease-in-out 0.5s forwards; /* دوواکەوتن بۆ 0.5 چرکە */
+        }
+
+        /* لینکەکان */
+        a {
+            text-decoration: none;
+            color: #000;
+            font-size: 1.1rem;
+            margin: 15px;
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #ffcc00;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #e6b800;
+            transform: scale(1.05);
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        @media (min-width: 600px) {
+            .links {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+
+        /* ئەنیمەیشن */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Footer */
+        footer {
+            margin-top: auto;
+            padding: 15px;
+            background-color: #111;
+            color: #ccc;
+            font-size: 0.9rem;
+            text-align: center;
+            width: 100%;
+        }
+
+        /* زیادکراوە: شریتی بار */
+        .loading-bar {
+            width: 100%;
+            height: 4px;
+            background-color: #ffcc00;
+            position: fixed;
+            top: 0;
+            left: 0;
+            animation: loading 1s ease-in-out;
+        }
+
+        @keyframes loading {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        /* ستایلی لینکی ژمارەی مۆبایل */
+        .contact-link {
+            color: #000000;
+            text-decoration: underline;
+            margin: 5px 0;
+        }
+
+        .contact-link:hover {
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <!-- شریتی بار -->
+    <div class="loading-bar"></div>
+
+    <!-- ناونیشانەکان -->
+    <h1>Xalel Nawzad</h1>
+    <h2>گرافیک دیزاینەر</h2>
+
+    <!-- لینکەکان -->
+    <div class="links">
+        <a href="social.html">سۆشیاڵ میدیایەکان</a>
+        <a href="Work Sample.html">نمونەی کارەکانم</a>
+        <a href="contact.html">ناردنی داواکاری</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 Xalel Nawzad. هەموو مافەکان پارێزراوە.
+        <p> <h3> : پەیوەندی</h3>
+            <a href="mailto:xalelnawzad1@gmail.com" class="contact-link">xalelnawzad1@gmail.com</a> | 
+            <a href="tel:+9647514559001" class="contact-link">+964 751 455 9001</a>
+        </p>
+    </footer>
+</body>
+</html>

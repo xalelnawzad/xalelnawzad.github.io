@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Links</title>
+    <style>
+        /* گشتی */
+        body {
+            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+        }
+
+        /* لینکی ماڵەوە */
+        a.home-link {
+            text-decoration: none;
+            color: #000;
+            font-size: 16px;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background-color: #ffcc00;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        a.home-link:hover {
+            background-color: #e6b800;
+            transform: scale(1.05);
+        }
+
+        /* فۆرم */
+        form {
+            background-color: rgba(255, 204, 0, 0.9);
+            width: 300px; /* پانایی زیاتر */
+            padding: 20px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        form:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+        }
+
+        /* کۆنتەینەری ئایکۆنەکان */
+        .icon-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        /* ئایکۆنەکان */
+        .icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 80px; /* قەبارەی ئایکۆنەکان */
+        }
+
+        /* وێنەکان */
+        .icon img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+        }
+
+        .icon img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+            opacity: 0.9;
+        }
+
+        /* ناوی پلاتفۆرمەکان */
+        .icon span {
+            margin-top: 8px;
+            font-size: 14px;
+            color: #000;
+            font-weight: bold;
+        }
+
+        /* لینکەکان */
+        a {
+            text-decoration: none;
+            color: #000;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #fff;
+        }
+
+        /* کۆپیرایت و پەیوەندی */
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #ffcc00;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: #e6b800;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- لینکی ماڵەوە -->
+    <a href="index.html" class="home-link">Home</a>
+
+    <!-- فۆرم -->
+    <form>
+        <!-- ئایکۆنەکان -->
+        <div class="icon-container">
+            <div class="icon">
+                <a href="https://www.facebook.com/profile.php?id=100076853515654&sk=about&viewas=100000686899395">
+                    <img src="image/facebook.png" alt="Facebook">
+                    <span>Facebook</span>
+                </a>
+            </div>
+            <div class="icon">
+                <a href="https://www.instagram.com/xalel.nawzad?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+                    <img src="image/instagram.png" alt="Instagram">
+                    <span>Instagram</span>
+                </a>
+            </div>
+            <div class="icon">
+                <a href="https://www.tiktok.com/@xalelnawzad1?_t=ZS-8u7wOs8l6Zt&_r=1">
+                    <img src="image/tiktok.png" alt="TikTok">
+                    <span>TikTok</span>
+                </a>
+            </div>
+            <div class="icon">
+                <a href="https://youtube.com/@xalel001?si=Kl_IpIg0tKZLLB36">
+                    <img src="image/youtube.png" alt="YouTube">
+                    <span>YouTube</span>
+                </a>
+            </div>
+            <div class="icon">
+                <a href="https://t.me/xalelnawzad1">
+                    <img src="image/telegram.png" alt="Telegram">
+                    <span>Telegram</span>
+                </a>
+            </div>
+        </div>
+    </form>
+
+    <!-- کۆپیرایت و پەیوەندی -->
+    <div class="footer">
+        <p>&copy; 2023 Xalel Nawzad. All rights reserved.</p>
+        <p>پەیوەندی:
+            <a href="tel:07514559001">07514559001</a> | 
+            <a href="mailto:xalelnawzad1@gmail.com">xalelnawzad1@gmail.com</a>
+        </p>
+    </div>
+
+</body>
+</html>
